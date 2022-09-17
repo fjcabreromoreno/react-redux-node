@@ -20,7 +20,6 @@ function getInitialState() {
  */
 
 export const books = (state = getInitialState(), action) => {
-  //let books;
   switch (action.type) {
     case CHANGE_REQUEST_STATUS_BOOKS:
       return {
