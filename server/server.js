@@ -37,6 +37,16 @@ app.get("/getBooks", (req, res) => {
   });
 });
 
+app.get("/getFavorites", (req, res) => {
+  BookModel.find({}, (err, result) => {
+    if (err) {
+      return res.json(err);
+    } else {
+      return res.json(result);
+    }
+  });
+});
+
 app.post("");
 
 app.listen(5000, () => {
